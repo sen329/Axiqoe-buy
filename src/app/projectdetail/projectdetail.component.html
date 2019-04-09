@@ -1,0 +1,26 @@
+<div *ngIf="proposal">
+  <p>ID:                     {{proposal.id}} </p>
+  <p>Sales Name:             {{proposal.SalesName}} </p>
+  <p>Customer Name:          {{proposal.CustomerName}} </p>
+  <p>Customer Address:       {{proposal.CustomerAddress}} </p>
+  <p>Customer Phone:         {{proposal.CustomerContact}} </p>
+  <p>Product Name:           {{proposal.ProductName}}</p>
+  <p>Product Code:           {{proposal.ProductCode}}</p>
+  <p>Product Quantity:       {{proposal.ProductQuantity}}</p>
+  <p>Proposed Price:         Rp. {{proposal.ProposedPrice | number : '1.2-2'}}</p>
+  <p>Margin:                 {{proposal.Margin | number : '1.2-2'}}%</p>
+  <p>Requested by:           {{proposal.name}}</p>
+
+  <form method="post" (submit)="approveSale()">
+    <ul class="list-group">
+      <li class="list-group-item"  *ngFor="let acc of AcceptedList">
+        <input type="radio" [(ngModel)]="add.Accepted" name="list_name" value="{{acc.value}}"> 
+        {{acc.name}}
+        
+      </li>
+</ul>
+    <button type="submit"  class="btn btn-primary">Submit</button>
+  </form> 
+  <br>
+  <button (click)="goBack()">Go Back</button>
+</div>

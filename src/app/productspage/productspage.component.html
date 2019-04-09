@@ -1,0 +1,16 @@
+<table productTable>
+  <thead>
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr productTableCol *ngFor="let p of products">
+      <th scope="row">{{p.id}}</th>
+      <td>{{p.name}}</td>
+      <td>{{p.productcode}}</td>
+      <td>{{p.price}}</td>
+      <td><a routerLink="/productdetail/{{p.id}}">update</a></td>
+    </tr>
+  </tbody>
+</table>

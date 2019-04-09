@@ -1,0 +1,10 @@
+<nav *ngIf="!isLoggedIn">
+  <a routerLink="/register">Register</a><p> </p>
+  <a routerLink="/login">Login</a>
+</nav>
+<nav *ngIf="isLoggedIn">
+  <h3>Welcome {{name}}</h3>
+  <a routerLink="/listofapproval">Project Details</a>
+  <a routerLink="/products">Products</a>
+  <button (click)="logout()">logout</button>
+</nav>

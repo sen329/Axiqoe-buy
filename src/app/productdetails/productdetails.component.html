@@ -1,0 +1,12 @@
+<div *ngIf="product">
+  <p>ID:                     {{product.id}} </p>
+  <p>Product Name:           {{product.name}}</p>
+  <p>Product Code:           {{product.productcode}}</p>
+  <form method="post" (submit)="updatePrice()">
+      <label>Price: </label> 
+      <input type="number" name="price" [(ngModel)]="add.price" placeholder="{{product.price}}" required class="form-control">
+      <button type="submit"  class="btn btn-primary">Submit</button>
+      </form>
+  <br>
+  <button (click)="goBack()">Go Back</button>
+  </div>
