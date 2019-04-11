@@ -40,8 +40,6 @@ export class AuthService {
           localStorage.setItem('token',this.data.token);
           localStorage.setItem('id', this.data.id);
           localStorage.setItem('name', this.data.name);
-          console.log(localStorage.getItem('token'));
-          console.log(localStorage.getItem('name'));
           this.router.navigate(['/listofapproval']);
         });
   }
