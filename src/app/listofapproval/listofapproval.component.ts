@@ -21,5 +21,5 @@ export class ListofapprovalComponent implements OnInit {
     this.salesService.getSales()
     .subscribe(sales => this.sales = sales);
   }
-  headElements = ['Request', 'Status'];
+  headElements = ['Request', 'Requested By', 'Status' ];
 }
