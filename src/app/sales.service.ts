@@ -11,7 +11,7 @@ import { Sales } from './sales';
 import { error } from 'util';
 import { Product } from './product';
 import { Proposal } from './proposal';
-
+import { Order } from './sales';
 
 @Injectable()
 export class SalesService {
@@ -51,5 +51,10 @@ export class SalesService {
       const url = `${this.proposalurl}/${id}`;
       return this.http.get<Proposal>(url,this.auth.getHeader());
     }
+    
+    getOrderDetail(sales_id:number): Observable<Order>{
+      const url = `${this.salesurl}/order/${sales_id}`;
+      return this.http.get<Order>(url, this.auth.getHeader());
+    }    
 
 }

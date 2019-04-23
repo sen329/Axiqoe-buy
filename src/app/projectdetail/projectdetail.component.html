@@ -4,13 +4,25 @@
   <p>Customer Name:          {{proposal.CustomerName}} </p>
   <p>Customer Address:       {{proposal.CustomerAddress}} </p>
   <p>Customer Phone:         {{proposal.CustomerContact}} </p>
-  <p>Product Name:           {{proposal.ProductName}}</p>
-  <p>Product Code:           {{proposal.ProductCode}}</p>
-  <p>Product Quantity:       {{proposal.ProductQuantity}}</p>
-  <p>Proposed Price:         Rp. {{proposal.ProposedPrice | number : '1.2-2'}}</p>
-  <p>Margin:                 {{proposal.Margin | number : '1.2-2'}}%</p>
   <p>Requested by:           {{proposal.name}}</p>
-
+  <table orderDetails>
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr orderDetailCol *ngFor="let order of orders">
+        <td>{{order.ProductName}}</td>
+        <td>{{order.ProductCode}}</td>
+        <td>{{order.ProductPrice}}</td>
+        <td>Rp. {{order.ProposedPrice | number : '1.2-2'}}</td>
+        <td>{{order.Quantity}}</td>
+        <td>{{order.margin | number : '1.2-2'}}%</td>
+        <td>{{order.totalproposedprice | number : '1.2-2'}}</td>
+      </tr>
+    </tbody>
+  </table>
   <form method="post" (submit)="approveSale()">
     <ul class="list-group">
       <li class="list-group-item"  *ngFor="let acc of AcceptedList">
