@@ -17,6 +17,7 @@ import { ProductsService } from './products.service';
 import { ProductspageComponent } from './productspage/productspage.component';
 import { ProjectdetailComponent } from './projectdetail/projectdetail.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { ProductcreateComponent } from './productcreate/productcreate.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -31,7 +32,8 @@ export function tokenGetter() {
     ListofapprovalComponent,
     ProductspageComponent,
     ProjectdetailComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    ProductcreateComponent
   ],
   imports: [
     BrowserModule,

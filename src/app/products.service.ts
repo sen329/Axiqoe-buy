@@ -24,13 +24,17 @@ export class ProductsService {
   getProducts(): Observable<Product[]>{
     return this.http.get<Product[]>(this.producturl,this.auth.getHeader());
   }
+  addProduct(product: Product): Observable<Product>{
+    const url = `${this.producturl}/create`;
+    return this.http.post<Product>(url, product, this.auth.getHeader());
+}
 
   getProduct(id: number): Observable<Product>{
     const url = `${this.producturl}/${id}`;
     return this.http.get<Product>(url, this.auth.getHeader());
   }
 
-  updatePrice(product: Product, id:number): Observable<Product>{
+  updateProduct(product: Product, id:number): Observable<Product>{
     const url = `${this.producturl}/${id}`;
     return this.http.post<Product>(url, product, this.auth.getHeader());
   }

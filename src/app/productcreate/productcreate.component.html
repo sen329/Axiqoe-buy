@@ -1,0 +1,14 @@
+<div>
+    <form method="post" (submit)="addProduct()">
+        <label>Product Name: </label> 
+        <input type="text" name="price" [(ngModel)]="add.name"required class="form-control">
+        <label>Price: </label> 
+        <input type="text" name="price" [(ngModel)]="add.productcode" required class="form-control">
+        <label>Price: </label> 
+        <input type="number" name="price" [(ngModel)]="add.price" required class="form-control">
+        <br>
+        <button type="submit"  class="btn btn-primary">Submit</button>
+      </form>
+      <br>
+      <button (click)="goBack()">Go Back</button>
+</div>

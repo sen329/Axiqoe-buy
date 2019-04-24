@@ -5,6 +5,7 @@
   <p>Customer Address:       {{proposal.CustomerAddress}} </p>
   <p>Customer Phone:         {{proposal.CustomerContact}} </p>
   <p>Requested by:           {{proposal.name}}</p>
+  <form method="post" (submit)="approveOrder()">
   <table orderDetails>
     <thead>
       <tr>
@@ -12,27 +13,29 @@
       </tr>
     </thead>
     <tbody>
-      <tr orderDetailCol *ngFor="let order of orders">
+      <tr orderDetailCol *ngFor="let order of orders; let i=index">
         <td>{{order.ProductName}}</td>
         <td>{{order.ProductCode}}</td>
-        <td>{{order.ProductPrice}}</td>
+        <td>Rp. {{order.ProductPrice | number : '1.2-2'}}</td>
         <td>Rp. {{order.ProposedPrice | number : '1.2-2'}}</td>
         <td>{{order.Quantity}}</td>
         <td>{{order.margin | number : '1.2-2'}}%</td>
-        <td>{{order.totalproposedprice | number : '1.2-2'}}</td>
+        <td>Rp. {{order.totalproposedprice | number : '1.2-2'}}</td>
+        <td>
+          <ul class="list-group">
+            <li class="list-group-item"  *ngFor="let acc of AcceptedList">
+              <input type="radio" [(ngModel)]="order.Accepted" name="list_name_{{i}}" value="{{acc.value}}"> 
+              {{acc.name}}
+              
+            </li>
+      </ul>
+          
+        </td>
       </tr>
     </tbody>
   </table>
-  <form method="post" (submit)="approveSale()">
-    <ul class="list-group">
-      <li class="list-group-item"  *ngFor="let acc of AcceptedList">
-        <input type="radio" [(ngModel)]="add.Accepted" name="list_name" value="{{acc.value}}"> 
-        {{acc.name}}
-        
-      </li>
-</ul>
-    <button type="submit"  class="btn btn-primary">Submit</button>
-  </form> 
+  <button type="submit"  class="btn btn-primary">Submit</button>
+</form> 
   <br>
   <button (click)="goBack()">Go Back</button>
 </div>

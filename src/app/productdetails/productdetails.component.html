@@ -1,12 +1,14 @@
 <div *ngIf="product">
-  <p>ID:                     {{product.id}} </p>
-  <p>Product Name:           {{product.name}}</p>
-  <p>Product Code:           {{product.productcode}}</p>
-  <form method="post" (submit)="updatePrice()">
-      <label>Price: </label> 
-      <input type="number" name="price" [(ngModel)]="add.price" placeholder="{{product.price}}" required class="form-control">
-      <button type="submit"  class="btn btn-primary">Submit</button>
-      </form>
+  <form method="post" (submit)="updateProduct()">
+    <p>ID:                     {{product.id}} </p>
+    <label>Product Name: </label> 
+    <input type="text" name="price" [(ngModel)]="add.name" placeholder="{{product.name}}" required class="form-control">
+    <label>Price: </label> 
+    <input type="text" name="price" [(ngModel)]="add.productcode" placeholder="{{product.productcode}}" required class="form-control">
+    <label>Price: </label> 
+    <input type="number" name="price" [(ngModel)]="add.price" placeholder="{{product.price}}" required class="form-control">
+    <button type="submit"  class="btn btn-primary">Submit</button>
+  </form>
   <br>
   <button (click)="goBack()">Go Back</button>
   </div>

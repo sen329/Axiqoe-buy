@@ -7,6 +7,7 @@ import { Accepted } from '../accepted';
 import { ACCEPTED } from '../accepted-list';
 import { Proposal } from '../proposal';
 import { Order } from '../sales';
+import { ArrAccepted } from '../arr-accepted';
 
 
 
@@ -20,7 +21,9 @@ export class ProjectdetailComponent implements OnInit {
   sales: Sales;
   AcceptedList: Accepted[] = ACCEPTED;
   proposal: Proposal;
-  orders: Order;
+  orders: Order[];
+  arrAccepted: ArrAccepted;
+  order: Order;
   constructor(
     private route: ActivatedRoute,
     private salesService: SalesService,
@@ -42,9 +45,17 @@ export class ProjectdetailComponent implements OnInit {
       );
   }
 
-  approveSale(){
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.salesService.approveSale(this.add,id)
+  approveOrder(){
+    let arr={
+      ids: [],
+      Accepted:[]
+    }
+    for(let i=0;i<this.orders.length;i++){
+      arr.ids.push(this.orders[i].id);
+      arr.Accepted.push(Number(this.orders[i].Accepted));
+    }
+
+    this.salesService.approveOrder(arr)
     .subscribe(res => {
       alert('Data recieved');
       this.goBack();
@@ -52,7 +63,7 @@ export class ProjectdetailComponent implements OnInit {
     err=>{
       let error = err.error;
       alert(error);
-      console.error;
+      console.log(err.error, this.orders);
     });
   } 
 

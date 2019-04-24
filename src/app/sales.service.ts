@@ -12,6 +12,7 @@ import { error } from 'util';
 import { Product } from './product';
 import { Proposal } from './proposal';
 import { Order } from './sales';
+import { ArrAccepted } from './arr-accepted';
 
 @Injectable()
 export class SalesService {
@@ -39,9 +40,9 @@ export class SalesService {
       return this.http.get<Sales>(url,this.auth.getHeader());
     }
 
-    approveSale(sales: Sales, id: number): Observable<Sales> {
-      const url = `${this.salesurl}/${id}`;
-      return this.http.post<Sales>(url, sales, this.auth.getHeader());
+    approveOrder(orders: ArrAccepted): Observable<Sales> {
+      const url = `${this.salesurl}/order/stat`;
+      return this.http.post<Sales>(url, orders, this.auth.getHeader());
     }
 
     getProduct(): Observable<Product[]>{
@@ -52,9 +53,9 @@ export class SalesService {
       return this.http.get<Proposal>(url,this.auth.getHeader());
     }
     
-    getOrderDetail(sales_id:number): Observable<Order>{
+    getOrderDetail(sales_id:number): Observable<Order[]>{
       const url = `${this.salesurl}/order/${sales_id}`;
-      return this.http.get<Order>(url, this.auth.getHeader());
+      return this.http.get<Order[]>(url, this.auth.getHeader());
     }    
 
 }

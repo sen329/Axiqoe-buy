@@ -4,7 +4,6 @@ export class Sales {
     CustomerName: string;
     CustomerAddress: string;
     CustomerContact: number;
-    Accepted: boolean;
 }
 
 export class Order {
@@ -18,4 +17,5 @@ export class Order {
     Quantity: number;
     margin: number;
     totalproposedprice: number;
+    Accepted: boolean;
 }

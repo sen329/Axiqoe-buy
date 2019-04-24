@@ -33,9 +33,9 @@ export class ProductdetailsComponent implements OnInit {
     );
   }
 
-  updatePrice(){
+  updateProduct(){
     const id = +this.route.snapshot.paramMap.get('id');
-    this.productsService.updatePrice(this.add,id)
+    this.productsService.updateProduct(this.add,id)
     .subscribe(res => {
       alert('Data updated');
       this.goBack();
