@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClientJsonpModule }    from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 
@@ -41,6 +41,7 @@ export function tokenGetter() {
     FormsModule,
     HttpClientModule,
     HttpClientJsonpModule,
+    ReactiveFormsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,

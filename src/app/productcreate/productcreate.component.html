@@ -1,14 +1,23 @@
 <div>
     <form method="post" (submit)="addProduct()">
-        <label>Product Name: </label> 
-        <input type="text" name="price" [(ngModel)]="add.name"required class="form-control">
-        <label>Price: </label> 
+        <label>Product Number: </label> 
         <input type="text" name="price" [(ngModel)]="add.productcode" required class="form-control">
+        <label>Product Name: </label> 
+        <input type="text" name="code" [(ngModel)]="add.name"required class="form-control">
         <label>Price: </label> 
         <input type="number" name="price" [(ngModel)]="add.price" required class="form-control">
         <br>
         <button type="submit"  class="btn btn-primary">Submit</button>
       </form>
+      <div>
+      
+        <form [formGroup]="forms" (ngSubmit)="onSubmit()">
+      
+          <input type="file" name="file" (change)="onFileChange($event)" accept=".csv"/>
+          <button type="submit">Upload</button>
+      
+        </form>
+      </div>
       <br>
       <button (click)="goBack()">Go Back</button>
 </div>

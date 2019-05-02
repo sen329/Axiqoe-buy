@@ -7,11 +7,12 @@
   <tbody>
     <tr productTableCol *ngFor="let p of products">
       <th scope="row">{{p.id}}</th>
-      <td>{{p.name}}</td>
-      <td>{{p.productcode}}</td>
-      <td>{{p.price}}</td>
+      <td>{{p.ProductNumber}}</td>
+      <td>{{p.Productname}}</td>
+      <td>Rp. {{p.COGS | number : '1.2-2'}}</td>
       <td><a routerLink="/productdetail/{{p.id}}">update</a></td>
     </tr>
   </tbody>
 </table>
+<p>*Prices included Tax 10%</p>
 <button routerLink="/registerproduct">Register product</button>

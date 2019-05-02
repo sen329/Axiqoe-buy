@@ -28,5 +28,5 @@ export class ProductspageComponent implements OnInit {
     .subscribe(products => this.products = products)
   }
 
-  headElements = ['ID', 'Name', 'Product Code', 'Price'];
+  headElements = ['ID', 'Product Code', 'Product Name', 'Price'];
 }

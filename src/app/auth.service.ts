@@ -25,6 +25,13 @@ export class AuthService {
     })};
   };
 
+  getHeaderForFile() {
+    return {headers: new HttpHeaders({
+      'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+      'Authorization': 'Bearer '+ localStorage.getItem('token')
+    })};
+  };
+
   public isAuthenticated(): boolean {
     const token = localStorage.getItem('token');
     // Check whether the token is expired and return
