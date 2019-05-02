@@ -55,6 +55,6 @@ export class ProductspageComponent implements OnInit {
     this.fileUploadService.update(formData).subscribe(
       (res) => this.uploadResponse = res,
       (err) => this.error = err
-    ),{responseType: 'file'}, alert("Data Uploaded"); console.error;
+    ),{responseType: 'file'}, alert("Data Uploaded, it will load in 1-2 minutes"); console.error;
   }
 }
