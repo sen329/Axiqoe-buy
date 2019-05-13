@@ -13,13 +13,15 @@ import { Product } from './product';
 import { Proposal } from './proposal';
 import { Order } from './sales';
 import { ArrAccepted } from './arr-accepted';
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class SalesService {
 
-  private salesurl= 'http://localhost:8000/api/sales';
-  private producturl= 'http://localhost:8000/api/product';
-  private proposalurl= 'http://localhost:8000/api/proposal';
+  baseUrl = environment.baseUrl;
+  private salesurl= `${this.baseUrl}/sales`;
+  private producturl= `${this.baseUrl}/product`;
+  private proposalurl= `${this.baseUrl}/proposal`;
 
   constructor(
     private http: HttpClient,

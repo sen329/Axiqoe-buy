@@ -5,13 +5,14 @@ import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { AuthService } from './auth.service';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FileUploadService {
 
-  private baseUrl = 'http://127.0.0.1:8000/api';
+  private baseUrl = environment.baseUrl;
 
   constructor(private httpClient: HttpClient, private auth: AuthService) { }
 

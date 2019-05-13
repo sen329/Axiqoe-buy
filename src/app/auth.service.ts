@@ -2,13 +2,15 @@ import {Inject, Injectable, PLATFORM_ID} from '@angular/core';
 import {HttpHeaders, HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { environment } from '../environments/environment';
 
 
 @Injectable()
 export class AuthService {
 
-  loginUrl = 'http://localhost:8000/api/buy/login';
-  registerUrl = 'http://localhost:8000/api/buy/register';
+  baseUrl = environment.baseUrl;
+  loginUrl = `${this.baseUrl}/buy/login`;
+  registerUrl = `${this.baseUrl}/buy/register`;
   token = localStorage.token;
   httpOptions;
 

@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
+import { environment } from '../environments/environment';
 
 import { AuthService } from './auth.service';
 
@@ -14,7 +15,8 @@ import { Product } from './product';
   providedIn: 'root'
 })
 export class ProductsService {
-  private producturl= 'http://localhost:8000/api/product';
+  baseUrl = environment.baseUrl;
+  private producturl= `${this.baseUrl}/product`;
 
   constructor(
     private http: HttpClient,
