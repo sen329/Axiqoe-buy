@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://localhost:8000/api',
+  baseUrl: 'https://api-pricing.axiqoe.com/api',
 };
 
 /*
