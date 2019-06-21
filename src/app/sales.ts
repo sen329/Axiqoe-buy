@@ -18,4 +18,5 @@ export class Order {
     margin: number;
     totalproposedprice: number;
     Accepted: boolean;
+    RecommendedPrice: number;
 }

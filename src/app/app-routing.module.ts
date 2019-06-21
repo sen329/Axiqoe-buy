@@ -10,6 +10,7 @@ import { ProductspageComponent } from './productspage/productspage.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { NavComponent } from './nav/nav.component';
 import { ProductcreateComponent } from './productcreate/productcreate.component';
+import { ReportComponent } from './report/report.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'products', component: ProductspageComponent, canActivate: [AuthGuard]},
   { path: 'productdetail/:id', component: ProductdetailsComponent, canActivate: [AuthGuard]},
   { path: 'app-nav', component: NavComponent, canActivate: [AuthGuard]},
-  { path: 'registerproduct', component: ProductcreateComponent, canActivate: [AuthGuard]}
+  { path: 'registerproduct', component: ProductcreateComponent, canActivate: [AuthGuard]},
+  { path: 'report', component: ReportComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({

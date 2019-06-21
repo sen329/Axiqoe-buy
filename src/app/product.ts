@@ -3,4 +3,5 @@ export class Product {
     productcode: string;
     name: string;
     price: number;
+    lkpp:number;
 }

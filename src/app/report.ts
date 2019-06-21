@@ -1,15 +1,20 @@
-export class Proposal {
+export class Report {
     id: number;
+    order_id: number;
+    sales_id: number;
     SalesName: string;
     CustomerName: string;
     CustomerAddress: string;
     CustomerContact: number;
-    ProductUsedId: number;
+    name: string;
+    product_id: number;
+    ProductCode: string;
     ProductName: string;
-    ProductCode:string;
-    ProductQuantity: number;
+    ProductPrice: number;
     ProposedPrice: number;
+    Quantity: number;
     Margin: number;
+    Total: number;
     Accepted: boolean;
     RecommendedPrice: number;
 }

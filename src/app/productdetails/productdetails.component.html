@@ -2,11 +2,13 @@
   <form method="post" (submit)="updateProduct()">
     <p>ID:                     {{product.id}} </p>
     <label>Product Name: </label> 
-    <input type="text" name="price" [(ngModel)]="add.name" placeholder="{{product.Productname}}" required class="form-control">
-    <label>Price: </label> 
+    <input type="text" name="name" [(ngModel)]="add.name" placeholder="{{product.Productname}}" required class="form-control">
+    <label>Product Number: </label> 
     <input type="text" name="price" [(ngModel)]="add.productcode" placeholder="{{product.ProductNumber}}" required class="form-control">
-    <label>Price: </label> 
+    <label>Price(COGS): </label> 
     <input type="number" name="price" [(ngModel)]="add.price" placeholder="{{product.COGS | number : '1.2-2'}}" required class="form-control">
+    <label>Price(LKPP): </label> 
+    <input type="number" name="lkpp" [(ngModel)]="add.lkpp" placeholder="{{product.LKPP | number : '1.2-2'}}" required class="form-control">
     <button type="submit"  class="btn btn-primary">Submit</button>
   </form>
   <br>

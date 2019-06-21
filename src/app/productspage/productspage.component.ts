@@ -39,7 +39,7 @@ export class ProductspageComponent implements OnInit {
     .subscribe(products => this.products = products)
   }
 
-  headElements = ['ID', 'Product Code', 'Product Name', 'Price'];
+  headElements = ['ID', 'Product Code', 'Product Name', 'Price(COGS)', 'Price(LKPP)'];
 
   onFileChange(event) {
     if (event.target.files.length > 0) {

@@ -10,11 +10,12 @@
       <td>{{p.ProductNumber}}</td>
       <td>{{p.Productname}}</td>
       <td>Rp. {{p.COGS | number : '1.2-2'}}</td>
+      <td>Rp. {{p.LKPP | number : '1.2-2'}}</td>
       <td><a routerLink="/productdetail/{{p.id}}">update</a></td>
     </tr>
   </tbody>
 </table>
-<p>*Prices included Tax 10%</p>
+<p>*Prices(COGS) included Tax 10%</p>
 <button routerLink="/registerproduct">Register product</button>
 <br>
 <div>

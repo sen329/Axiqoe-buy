@@ -18,6 +18,7 @@ import { ProductspageComponent } from './productspage/productspage.component';
 import { ProjectdetailComponent } from './projectdetail/projectdetail.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { ProductcreateComponent } from './productcreate/productcreate.component';
+import { ReportComponent } from './report/report.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -33,7 +34,8 @@ export function tokenGetter() {
     ProductspageComponent,
     ProjectdetailComponent,
     ProductdetailsComponent,
-    ProductcreateComponent
+    ProductcreateComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,

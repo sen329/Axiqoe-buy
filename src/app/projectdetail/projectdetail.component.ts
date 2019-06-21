@@ -48,11 +48,13 @@ export class ProjectdetailComponent implements OnInit {
   approveOrder(){
     let arr={
       ids: [],
-      Accepted:[]
+      Accepted:[],
+      RecommendedPrice:[],
     }
     for(let i=0;i<this.orders.length;i++){
       arr.ids.push(this.orders[i].id);
       arr.Accepted.push(Number(this.orders[i].Accepted));
+      arr.RecommendedPrice.push(Number(this.orders[i].RecommendedPrice));
     }
 
     this.salesService.approveOrder(arr)

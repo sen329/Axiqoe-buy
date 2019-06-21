@@ -1,0 +1,26 @@
+<table reportTable>
+  <thead>
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}}</th>
+    </tr>
+  </thead>
+  <tbody reportTableCol *ngFor="let r of report">
+    <th scope="row">{{r.id}}</th>
+    <td>{{r.SalesName}}</td>
+    <td>{{r.CustomerName}}</td>
+    <td>{{r.CustomerAddress}}</td>
+    <td>{{r.CustomerContact}}</td>
+    <td>{{r.name}}</td>
+    <td>{{r.ProductCode}}</td>
+    <td>{{r.ProductName}}</td>
+    <td>Rp. {{r.ProductPrice | number : '1.2-2'}}</td>
+    <td>Rp. {{r.ProposedPrice | number : '1.2-2'}}</td>
+    <td>{{r.Quantity}}</td>
+    <td>{{r.Margin | number : '1.2-2'}}%</td>
+    <td>Rp. {{r.Total | number : '1.2-2'}}</td>
+    <td>{{r.Accepted}}</td>
+    <td>Rp. {{r.RecommendedPrice | number : '1.2-2'}}</td>
+  </tbody>
+</table>
+
+<a href="http://localhost:8000/api/download" download>Download Report</a>
