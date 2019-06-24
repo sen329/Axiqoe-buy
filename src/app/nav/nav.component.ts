@@ -18,7 +18,7 @@ export class NavComponent implements OnInit {
   }
 
   get isLoggedIn() {
-    return !!localStorage.getItem('token');
+    return !!this.authService.isAuthenticated();
   }
 
   get name(){
