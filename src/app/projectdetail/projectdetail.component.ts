@@ -77,7 +77,7 @@ export class ProjectdetailComponent implements OnInit {
     }, err=> console.log(err.error))
   }
 
-  headElements = ['Product', 'Product Code', 'Product Price', 'Proposed Price', 'Quantity','Margin', 'Total'];
+  headElements = ['Product', 'Product Code', 'Product Price', 'LKPP','Proposed Price', 'Quantity','Margin', 'Total'];
 
   goBack(): void{
     this.location.back();

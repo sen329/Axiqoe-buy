@@ -13,6 +13,7 @@ export class Order {
     ProductCode: string;
     ProductName: string;
     ProductPrice: number;
+    LKPP: number;
     ProposedPrice: number;
     Quantity: number;
     margin: number;
