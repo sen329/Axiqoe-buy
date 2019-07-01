@@ -11,6 +11,7 @@ import { ReportService } from '../report.service';
 export class ReportComponent implements OnInit {
 
   report: Report[];
+  reports: any;
 
   constructor(
     private reportService: ReportService,
@@ -22,7 +23,8 @@ export class ReportComponent implements OnInit {
   }
 
   generateReport(): void{
-    this.reportService.generateReport();
+    this.reportService.generateReport()
+    .subscribe(report => this.reports = report);
   }
 
   getReport(): void{
@@ -35,5 +37,6 @@ export class ReportComponent implements OnInit {
   }
 
   headElements = ['ID', 'SalesName','CustomerName','CustomerAddress','CustomerContact','name','ProductCode',
-                  'ProductName','ProductPrice','ProposedPrice','Quantity','Margin','Total','Accepted','RecommendedPrice'];
+                  'ProductName','ProductPrice','LKPP','ProposedPrice','Quantity','Margin','Total','Accepted','RecommendedPrice',
+                  'Created_at','Updated_at'];
 }

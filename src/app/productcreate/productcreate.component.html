@@ -13,7 +13,7 @@
       
         <form [formGroup]="forms" (ngSubmit)="onSubmit()">
       
-          <input type="file" name="file" (change)="onFileChange($event)" accept=".csv"/>
+          <input type="file" name="file" (change)="onFileChange($event)" accept=".csv, .xlsx"/>
           <button type="submit">Upload</button>
       
         </form>
