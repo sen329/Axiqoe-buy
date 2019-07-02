@@ -25,7 +25,7 @@
     <td>{{r.updated_at}}</td>
     <ng-container *ngIf="r.id === 1; then download"></ng-container>
     <ng-template #download>
-    <a href="http://localhost:8000/api/download" download>Download Report</a>
+    <a href="https://api-pricing.axiqoe.com/api/download" download>Download Report</a>
     </ng-template>
   </tbody>
 </table>
