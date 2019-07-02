@@ -30,8 +30,7 @@
                     <input type="radio" [(ngModel)]="order.Accepted" name="list_name_{{i}}" value="{{acc.value}}"> 
                     {{acc.name}}
                   </li>
-                  <ng-container *ngIf="order.margin <= 0 then recommendPrice"></ng-container>
-                  <ng-template #recommendPrice>Recommend Price: <input type="number" [(ngModel)]="order.RecommendedPrice" name="input_name_{{i}}"></ng-template>
+                  Recommend Price: <input type="number" [(ngModel)]="order.RecommendedPrice" name="input_name_{{i}}">
                 </ul>
           </ng-template>
         </td>
