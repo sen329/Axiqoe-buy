@@ -3,6 +3,7 @@ export class Report {
     order_id: number;
     sales_id: number;
     SalesName: string;
+    branch: string;
     CustomerName: string;
     CustomerAddress: string;
     CustomerContact: number;

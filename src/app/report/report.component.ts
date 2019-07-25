@@ -36,7 +36,7 @@ export class ReportComponent implements OnInit {
     this.reportService.downloadReport();
   }
 
-  headElements = ['ID', 'SalesName','CustomerName','CustomerAddress','CustomerContact','name','ProductCode',
+  headElements = ['ID', 'SalesName','Branch','CustomerName','CustomerAddress','CustomerContact','ProductCode',
                   'ProductName','ProductPrice','LKPP','ProposedPrice','Quantity','Margin','Total','Accepted','RecommendedPrice',
                   'Created_at','Updated_at'];
 }

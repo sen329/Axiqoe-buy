@@ -7,10 +7,10 @@
   <tbody reportTableCol *ngFor="let r of report">
     <th scope="row">{{r.id}}</th>
     <td>{{r.SalesName}}</td>
+    <td>{{r.branch}}</td>
     <td>{{r.CustomerName}}</td>
     <td>{{r.CustomerAddress}}</td>
     <td>{{r.CustomerContact}}</td>
-    <td>{{r.name}}</td>
     <td>{{r.ProductCode}}</td>
     <td>{{r.ProductName}}</td>
     <td>Rp. {{r.ProductPrice | number : '1.2-2'}}</td>
