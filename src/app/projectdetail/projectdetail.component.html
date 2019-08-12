@@ -22,8 +22,11 @@
         <td>{{order.Quantity}}</td>
         <td>{{order.margin | number : '1.2-2'}}%</td>
         <td>Rp. {{order.totalproposedprice | number : '1.2-2'}}</td>
-        <td><ng-container *ngIf="order.Accepted === 1 || order.Accepted === 0; then accepted; else pending;"></ng-container>
-          <ng-template #accepted>Submitted</ng-template>
+        <td><ng-container *ngIf="order.Accepted === 1; then accepted; else pending;">
+          <ng-container *ngIf="order.Accepted === 0; then denied; else pending;"></ng-container>
+        </ng-container>
+          <ng-template #accepted>Accepted</ng-template>
+          <ng-template #denied>Denied</ng-template>
           <ng-template #pending>
               <ul class="list-group">
                   <li class="list-group-item"  *ngFor="let acc of AcceptedList">
