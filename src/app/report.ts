@@ -4,8 +4,10 @@ export class Report {
     sales_id: number;
     SalesName: string;
     branch: string;
+    nolang: string;
     CustomerName: string;
     CustomerAddress: string;
+    ContactPerson: string;
     CustomerContact: number;
     name: string;
     product_id: number;
