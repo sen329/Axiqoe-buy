@@ -19,8 +19,22 @@
     <td>{{r.Quantity}}</td>
     <td>{{r.Margin | number : '1.2-2'}}%</td>
     <td>Rp. {{r.Total | number : '1.2-2'}}</td>
-    <td>{{r.Accepted}}</td>
+    <td><ng-container *ngIf="r.Accepted === 1; then accepted; else pending;"></ng-container>
+      <ng-template #pending>
+        <ng-container *ngIf="r.Accepted === 0; then denied; else pending2">
+        </ng-container>
+      </ng-template>
+      <ng-template #accepted>Accepted</ng-template>
+      <ng-template #denied>Denied</ng-template>
+      <ng-template #pending2>Pending</ng-template></td>
     <td>Rp. {{r.RecommendedPrice | number : '1.2-2'}}</td>
+    <td><ng-container *ngIf="r.Status === 1; then win; else pending3;"></ng-container>
+      <ng-template #pending3>
+        <ng-container *ngIf="r.Status === null; then pending4; else lose"></ng-container>
+      </ng-template>
+      <ng-template #win>Win</ng-template>
+      <ng-template #lose>Lose</ng-template>
+        <ng-template #pending4>Pending</ng-template></td>
     <td>{{r.created_at}}</td>
     <td>{{r.updated_at}}</td>
     <ng-container *ngIf="r.id === 1; then download"></ng-container>

@@ -6,7 +6,7 @@
   </thead>
   <tbody>
     <tr salesTableCol *ngFor="let sale of sales">
-      <td><a routerLink="/projectdetail/{{sale.id}}">Request {{sale.id}}</a></td>
+      <td><a routerLink="/projectdetail/{{sale.id}}">{{sale.id}} {{sale.CustomerName}} </a></td>
       <td>{{sale.SalesName}}</td>
     </tr>
   </tbody>

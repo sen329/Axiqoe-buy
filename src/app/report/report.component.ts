@@ -37,6 +37,6 @@ export class ReportComponent implements OnInit {
   }
 
   headElements = ['ID', 'SalesName','Branch','CustomerName','CustomerAddress','CustomerContact','ProductCode',
-                  'ProductName','ProductPrice','LKPP','ProposedPrice','Quantity','Margin','Total','Accepted','RecommendedPrice',
+                  'ProductName','ProductPrice','LKPP','ProposedPrice','Quantity','Margin','Total','Accepted','RecommendedPrice','Status',
                   'Created_at','Updated_at'];
 }
