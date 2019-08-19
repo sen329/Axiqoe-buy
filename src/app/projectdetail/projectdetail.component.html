@@ -1,13 +1,19 @@
 <div *ngIf="proposal">
   <p>ID:                     {{proposal.id}} </p>
+  <p>Nolang:                 {{proposal.nolang}} </p>
   <p>Sales Name:             {{proposal.SalesName}} </p>
   <p>Customer Name:          {{proposal.CustomerName}} </p>
   <p>Customer Address:       {{proposal.CustomerAddress}} </p>
   <p>Customer Phone:         {{proposal.CustomerContact}} </p>
-  <p>Requested by:           {{proposal.name}}</p>
+  <p>Contact Person:         {{proposal.ContactPerson}} </p>
+  <p>Warehouse:              {{proposal.warehouse}} </p>
+  <br>
+  <h2>Order Detail</h2>
+  <hr>
+  <div class="table-wrapper">
   <form method="post" (submit)="approveOrder()">
-  <table orderDetails>
-    <thead>
+  <table orderDetails class="table">
+    <thead class="bg-secondary-dark">
       <tr>
         <th *ngFor="let head of headElements" scope="col">{{head}}</th>
       </tr>
@@ -38,19 +44,13 @@
                       Recommend Price: <input type="number" [(ngModel)]="order.RecommendedPrice" name="input_name_{{i}}">
                     </ul>
             </ng-template> 
-          <!-- <ng-container *ngIf="order.Accepted === 1; then accepted; else pending;">
-          <ng-container *ngIf="order.Accepted === 0; then denied; else pending;"></ng-container>
-        </ng-container>
-          
-          <ng-template #pending>
-              
-          </ng-template> -->
         </td>
       </tr>
     </tbody>
   </table>
   <button type="submit"  class="btn btn-primary">Submit</button>
-</form> 
+</form>
+</div> 
   <br>
   <button (click)="goBack()">Go Back</button>
 </div>

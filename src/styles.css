@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import "./assets/css/theme.css";
+@import "./assets/css/axiqoe.css";
+@import "./assets/css/axiqoe.sm.css";
+@import "./assets/css/axiqoe.md.css";
+@import "./assets/css/axiqoe.lg.css";
+@import "./assets/css/axiqoe.xl.css";

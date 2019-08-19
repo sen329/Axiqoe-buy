@@ -4,6 +4,11 @@ export class Proposal {
     CustomerName: string;
     CustomerAddress: string;
     CustomerContact: number;
+    branch: string;
+    warehouse: string;
+    nolang: string;
+    ContactPerson: string;
+    DeliveryMethod: string;
     ProductUsedId: number;
     ProductName: string;
     ProductCode:string;

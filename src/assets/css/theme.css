@@ -1,0 +1,122 @@
+.btn{
+    margin: 5px 5px;
+    min-width: 125px;
+    font-weight: 600;
+}
+
+.btn:hover{
+    filter: brightness(110%);
+}
+
+.btn-primary{
+    background-color: #F48C22;
+    border: #F48C22;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+    background-color: #F48C22;
+    border-color: #F48C22;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(244,140,34,.5);
+}
+
+.btn-primary:focus{
+    box-shadow: 0 0 0 0.2rem rgba(244,140,34,.5);
+}
+
+.btn-primary:hover {
+    background-color: #F48C22;
+    border-color: #F48C22;
+    
+}
+
+.btn-secondary{
+    background-color: #100A6A;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle{
+    background-color: #100A6A;
+    border-color: #100A6A;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(16,10,106,.5);
+}
+
+.btn-secondary:focus{
+    box-shadow: 0 0 0 0.2rem rgba(16,10,106,.5);
+}
+
+.btn-secondary:hover {
+    background-color: #100A6A;
+    border-color: #100A6A;
+}
+
+.btn-delete{
+    background-color: darkred;
+    color: #fff;
+}
+
+.btn-delete:not(:disabled):not(.disabled).active, .btn-delete:not(:disabled):not(.disabled):active, .show>.btn-delete.dropdown-toggle{
+    background-color: darkred;
+    border-color: darkred;
+}
+
+.btn-delete:not(:disabled):not(.disabled).active:focus, .btn-delete:not(:disabled):not(.disabled):active:focus, .show>.btn-delete.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(139,0,0,.5);
+}
+
+.btn-delete:focus{
+    box-shadow: 0 0 0 0.2rem rgba(139,0,0,.5);
+}
+
+.btn-delete:hover {
+    background-color: darkred;
+    border-color: darkred;
+}
+
+.form-group>label{
+    font-weight: 600;
+}
+
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(244, 140, 34, 1);
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: rgba(244, 140, 34, 0.8);
+}
+
+.table tbody tr:hover{
+    background-color: rgba(244, 140, 34, 0.8);
+}
+
+input[type=radio]{
+    /* display: none; */
+
+    /* position: absolute; */
+    /* left: -20px; */
+}
+
+.radio-wrapper{
+    /* position: relative; */
+    
+}
+
+.radio-wrapper > .custom-radios{
+    /* position: absolute; */
+    /* top: 6px; */
+    /* left: -18px; */
+    /* width: 13px; */
+    /* height: 13px; */
+    /* background-color: rgba(244, 140, 34, 1); */
+    /* background-color: lightgray; */
+    /* border-radius: 50%; */
+}

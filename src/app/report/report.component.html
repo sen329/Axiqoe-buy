@@ -1,5 +1,7 @@
-<table reportTable>
-  <thead>
+<div class="table-wrapper">
+<table reportTable class="table table-scroll-sm" style="margin-top: 0px;table-layout: fixed;
+width: 2500px;">
+  <thead class="bg-secondary-dark">
     <tr>
       <th *ngFor="let head of headElements" scope="col">{{head}}</th>
     </tr>
@@ -45,4 +47,4 @@
     </ng-template>
   </tbody>
 </table>
-
+</div>

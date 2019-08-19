@@ -1,13 +1,20 @@
-<table salesTable>
-  <thead>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-10 col-md-12 col-lg-9 col-xl-7">
+            <h2 class="page-title form-title">My Project List</h2>
+<table salesTable style="margin-top: 30px;">
+  <thead class="bg-secondary-dark">
     <tr>
       <th *ngFor="let head of headElements" scope="col">{{head}}</th>
     </tr>
   </thead>
   <tbody>
     <tr salesTableCol *ngFor="let sale of sales">
-      <td><a routerLink="/projectdetail/{{sale.id}}">{{sale.id}} {{sale.CustomerName}} </a></td>
-      <td>{{sale.SalesName}}</td>
+      <td scope="row"><a routerLink="/projectdetail/{{sale.id}}">{{sale.id}} {{sale.CustomerName}} </a></td>
+      <td scope="row">{{sale.SalesName}}</td>
     </tr>
   </tbody>
 </table>
+        </div>
+    </div>
+</div>
