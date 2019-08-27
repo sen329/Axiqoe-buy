@@ -32,6 +32,7 @@ width: 2500px;">
       <ng-template #denied>Denied</ng-template>
       <ng-template #pending2>Pending</ng-template></td>
     <td>Rp. {{r.RecommendedPrice | number : '1.2-2'}}</td>
+    <td>{{r.stock}}</td>
     <td><ng-container *ngIf="r.Status === 1; then win; else pending3;"></ng-container>
       <ng-template #pending3>
         <ng-container *ngIf="r.Status === null; then pending4; else lose"></ng-container>

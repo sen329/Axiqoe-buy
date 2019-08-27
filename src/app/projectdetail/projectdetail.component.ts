@@ -50,11 +50,13 @@ export class ProjectdetailComponent implements OnInit {
       ids: [],
       Accepted:[],
       RecommendedPrice:[],
+      stock: [],
     }
     for(let i=0;i<this.orders.length;i++){
       arr.ids.push(this.orders[i].id);
       arr.Accepted.push(Number(this.orders[i].Accepted));
       arr.RecommendedPrice.push(Number(this.orders[i].RecommendedPrice));
+      arr.stock.push(String(this.orders[i].stock));
     }
 
     this.salesService.approveOrder(arr)
@@ -77,7 +79,7 @@ export class ProjectdetailComponent implements OnInit {
     }, err=> console.log(err.error))
   }
 
-  headElements = ['Product', 'Product Code', 'Product Price', 'LKPP','Proposed Price', 'Quantity','Margin', 'Total'];
+  headElements = ['Product', 'Product Code', 'Product Price', 'LKPP','Proposed Price', 'Quantity','Margin', 'Total', 'Status', 'Description'];
 
   goBack(): void{
     this.location.back();

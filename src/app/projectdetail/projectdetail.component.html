@@ -45,6 +45,10 @@
                     </ul>
             </ng-template> 
         </td>
+        <td><ng-container *ngIf="order.stock == true; then showStock; else pending3"></ng-container>
+          <ng-template #showStock>{{order.stock}}</ng-template>
+          <ng-template #pending3><input [(ngModel)]="order.stock" name="input_name_{{i}}"></ng-template>
+        </td>
       </tr>
     </tbody>
   </table>
