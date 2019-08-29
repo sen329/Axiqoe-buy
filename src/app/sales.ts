@@ -4,6 +4,7 @@ export class Sales {
     CustomerName: string;
     CustomerAddress: string;
     CustomerContact: number;
+    orders: Order[];
 }
 
 export class Order {

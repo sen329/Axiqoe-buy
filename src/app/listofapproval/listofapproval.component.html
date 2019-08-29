@@ -12,6 +12,13 @@
     <tr salesTableCol *ngFor="let sale of sales">
       <td scope="row"><a routerLink="/projectdetail/{{sale.id}}">{{sale.id}} {{sale.CustomerName}} </a></td>
       <td scope="row">{{sale.SalesName}}</td>
+      <td scope="row">{{sale.orders.length}}</td>
+      <td scope="row">
+        <ng-container *ngIf="sale.orders[0].Accepted === 0 || sale.orders[0].Accepted === 1; then Submitted; else Pending;">
+        </ng-container>
+        <ng-template #Submitted>Submitted</ng-template>
+        <ng-template #Pending>Pending</ng-template>
+      </td>
     </tr>
   </tbody>
 </table>
